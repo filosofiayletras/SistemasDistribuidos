@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Mapa de twits</title>
+		{{twitmap.js}}
+		<style type="text/css">
+			#mapa
+			{
+				width: 80%;
+				height: 100%;
+				float: left;
+			}
+			
+			#lista
+			{
+				width: 20%;
+				height: 100%;
+				float: right;
+				overflow: auto;
+			}
+			
+			.clear
+			{
+				clear: both;
+				margin-bottom: 10px;
+			}
+			
+			.twit
+			{
+				border: 1px solid black;
+				vertical-align: middle;
+			}
+			
+			#lista .twit .texto
+			{
+				vertical-align: middle;
+			}
+			
+			#lista .twit img
+			{
+				float: left;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mapa">{{twitmap.html}}</div>
+		<div id="lista">
+		{% for elemento in lista %}
+			<div class="twit"><img src="{{elemento['imagen']}}" /><div class="texto">{{elemento['texto']}}</div><div class="clear"></div></div>
+		{% endfor %}
+		</div>
+		<div id="footer"></div>
+	</body>
+</html>

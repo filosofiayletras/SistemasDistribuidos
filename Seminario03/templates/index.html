@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Geolocalizando...</title>
+	<script language="javascript">
+		function geolocalizar()
+		{
+			if (navigator.geolocation)
+				navigator.geolocation.getCurrentPosition(redireccionar);
+		}
+		
+		function redireccionar(posicion)
+		{
+			window.location.replace("/" + posicion.coords.latitude + "," + posicion.coords.longitude);
+		}
+
+		window.onload = geolocalizar;
+	</script>
+</head>
+<body>
+	<h1>Geolocalizando...</h1>
+	<h3>Recuerda aceptar el acceso a tu ubicación...</h3>
+</body>
+</html>
