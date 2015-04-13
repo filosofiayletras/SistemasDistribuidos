@@ -1,3 +1,8 @@
+#Grupo 21
+#Sistemas Distribuidos
+#Manuel Francisco
+#Jose Manuel Vidal
+
 import twitter
 from flask import Flask, render_template
 from flask.ext.googlemaps import GoogleMaps
